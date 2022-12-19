@@ -8,8 +8,9 @@ name: report
 #     # 具体的时间格式可以参考这里：https://crontab.guru/
     
 on:
+  workflow_dispatch:  # 手动触发
   schedule:
-    - cron: "29 2 * * *"
+    - cron: "40 2 * * *"
 
 jobs:
   report:
