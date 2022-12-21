@@ -96,7 +96,7 @@ async function main() {
     const res = await post("save", data);
     const message = res.m;
     if (!message.includes("验证码")) {
-      await dingtalkNotify(`${message}（无验证码）\n本次地址：${address}`);
+      await dingtalkNotify(`崔大哥 ${message}（无验证码）\n本次地址：${address}`);
       console.log(`每日填报：\n崔大哥 ${message}（无验证码）\n本次地址：${address}`);
     } else {
       await dingtalkNotify(`${message}\n请手动打卡`);
